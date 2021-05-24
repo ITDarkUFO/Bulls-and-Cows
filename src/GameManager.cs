@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Program
 {
-    class GameManager : Core
+    class GameManager
     {
         public void Initialize()
         {
@@ -13,9 +13,11 @@ namespace Program
             
         }
 
-        public void ShowLog()
+
+        /*public void ShowLog()
         {
 
-        }
+        }*/
+
     }
 }

@@ -42,9 +42,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bulls-and-Cows-new.cs" />
-    <Compile Include="EventManager.cs" />
-    <Compile Include="Core.cs" />
+    <Compile Include="Riddle.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="GameManager.cs" />
   </ItemGroup>
