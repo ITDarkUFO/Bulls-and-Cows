@@ -1,6 +1,6 @@
 ﻿namespace Bulls_and_Cows
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Bulls_and_Cows
 {
-    static class Program
+    class Program
     {
         Parcer prcr = new Parcer();
 
@@ -16,17 +17,23 @@ namespace Bulls_and_Cows
         [STAThread]
         static void Main(string[] args)
         {
-            if (args.Contains("nogui"))
-            {
-                
-            }
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
+            if (args.Contains("-nogui"))
+            {
+                // In the process...
+                string message = "Режим «nogui» находится разработке.";  
+                string title = "Bulls & Cows";  
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBoxIcon sound = MessageBoxIcon.Warning;
+                MessageBox.Show(message, title, buttons, sound);
+            }
             else
             {
-                Application.SetHighDpiMode(HighDpiMode.SystemAware);
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form1());
+                
+                Application.Run(new MainForm());
             }
         }
     }
